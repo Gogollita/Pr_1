@@ -1,0 +1,148 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.p-20{
+    padding: 0px 20px;
+}
+
+.p-5-20{
+    padding: 5px 20px;
+}
+
+.p-50{
+    padding: 0px 50px;
+}
+
+.p-box{
+    width: 150px;
+    height: 35px;
+}
+
+.m-20{
+    margin: 20px 0px;
+}
+
+.m-50{
+    margin: 50px;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.c-title {
+    color: #405066;
+}
+
+.c-nav-text{
+    text-decoration: none;
+    margin: 20px 50px;
+}
+
+.c-text-white{
+    color: #f8fbfe;
+}
+
+.c-text{
+    color: #181818;
+}
+
+.c-text-brown {
+    color: #c6a179;
+}
+
+.bg-white {
+    background: #f8fbfe;
+}
+
+.bg-brown {
+    background: #c6a179;
+}
+
+.bg-grey {
+    background: #eceff4;
+}
+
+.container{
+    margin: 50px;
+    height: 400px;
+    width: 300px;
+}
+
+.a-container{
+    background: #fff;
+    margin: 30px 50px;
+    height: 256px;
+    width: 650px;
+}
+
+.giftset-container{
+    background: #fff;
+    margin: 30px 50px;
+    height: 600px;
+    width: 1200px;
+}
+
+.combo-container{
+    background: #fff;
+    margin: 30px 50px;
+    height: 600px;
+    width: 349px;
+}
+
+.fw-normal {
+    font-weight: 400;
+}
+
+.fw-bold {
+    font-weight: 900;
+}
+
+.fs-80{
+    font-size: 80px;
+}
+
+.fs-36{
+    font-size: 36px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+.fs-20{
+    font-size: 20px;
+}
+
+.ff-nunito{
+    font-family: 'Nunito', system-ui, sans-serif;
+}
+
+.rounded { 
+    border-radius: 20px; 
+} 
+
+.nav {
+    background: #405066;
+    width: 20%;
+    height: 720px;
+    padding: 180px 0;
+}
+
+.hover\:fw-normal:hover { 
+    font-weight: 500; 
+}
+
+.hover\:a-container:hover { 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body { 
+    background: #f8fbfe;
+    font-family: 'Montserrat', system-ui, sans-serif; 
+} 
