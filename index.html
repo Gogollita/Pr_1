@@ -6,10 +6,16 @@
     <title>REVO Coffee</title> 
     <link rel="icon" href="assets/icons/LOGO.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head> 
 <body> 
     <header class="bg-white content-grid">
         <img class="logo-img" src="assets/icons/LOGO.png" alt="Logo">
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false"> 
+            <span class="menu-toggle__line"></span> 
+            <span class="menu-toggle__line"></span> 
+            <span class="menu-toggle__line"></span> 
+        </button> 
         <div class="header-text">
             <h1 class="c-title fw-bold fs-70 z-1">YOUR</h1> 
             <h1><span class="c-text-white fw-bold bg-brown fs-70 b-20 z-1">PERSONALIZED</span></h1> 
@@ -17,16 +23,16 @@
         </div>
         <img class="banner-img" src="assets/img/Banner.png" alt="Banner">
         <aside class="nav p-50">
-            <nav> 
+            <nav class="nav" id="mainNav"> 
                 <img class="cart-img" src="assets/icons/shopping-cart-3.png" alt="Cart">
                 <div>
-                    <ul> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#main">MAIN</a></li> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#coffee">COFFEE</a></li> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#signaturecoffee">SIGNATURE PHIN COFFEE</a></li> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#coffeecombo">PHIN COFFEE COMBO</a></li> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#giftset">GIFTSET</a></li> 
-                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal"><a class="c-nav-text c-text-white" href="#contacts">CONTACTS</a></li> 
+                    <ul class="nav__list"> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#main">MAIN</a></li> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#coffee">COFFEE</a></li> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#signaturecoffee">SIGNATURE PHIN COFFEE</a></li> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#coffeecombo">PHIN COFFEE COMBO</a></li> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#giftset">GIFTSET</a></li> 
+                        <li class="fs-20 fw-normal ff-nunito m-20 hover:fw-normal nav__item"><a class="c-nav-text c-text-white nav__link" href="#contacts">CONTACTS</a></li> 
                     </ul> 
                 </div>
             </nav>
@@ -63,17 +69,18 @@
             <div class="content-sign-coffee">
                 <h4 class="c-title fs-20 fw-normal align-center">Choose Your Favorite</h4> 
                 <h2 class="c-title fs-36 fw-bold align-center">CLASSIC TASTE, ICONIC POSITION</h2>  
-                <div class="a-container-flex">
+                <div class="a-container-flex m-50">
                     <article class="a-container a-card hover:a-container">
                         <img class="card-img" src="assets/img/Coffee_1.png" alt="REVO Morning">
                         <div class="a-card-text">
                             <h5 class="c-text-brown fs-20">99.000</h5>
                             <h3 class="c-text fs-24">REVO Morning</h3>
                             <p class="c-text">Bitter, sweet aftertaste, floral notes</p>
-                            <div class="text-container">
+                            <span class="buttons-text">
                                 <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
                                 <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                            </div>
+                            </span>
+                            
                         </div>
                     </article>
                     <article class="a-container a-card hover:a-container">
@@ -82,10 +89,11 @@
                             <h5 class="c-text-brown fs-20">139.000</h5>
                             <h3 class="c-text fs-24">REVO Origin</h3>
                             <p class="c-text">Sweet aftertaste, lightly bitter, citrusy flavor</p>
-                            <div class="text-container">
+                            <span class="buttons-text">
                                 <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
                                 <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                            </div>
+                            </span>
+                            
                         </div>
                     </article>
                     <article class="a-container a-card hover:a-container">
@@ -94,10 +102,11 @@
                             <h5 class="c-text-brown fs-20">85.000</h5>
                             <h3 class="c-text fs-24">REVO Everyday</h3>
                             <p class="c-text">Balanced, bitter aftertaste, chocolate flavor</p>
-                            <div class="text-container">
+                            <span class="buttons-text">
                                 <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
                                 <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                            </div>
+                            </span>
+                            
                         </div>
                     </article>
                     <article class="a-container a-card hover:a-container">
@@ -106,10 +115,10 @@
                             <h5 class="c-text-brown fs-20">75.000</h5>
                             <h3 class="c-text fs-24">REVO Bold</h3>
                             <p class="c-text">Rich, bitter, traditional</p>
-                            <div class="text-container">
+                            <span class="buttons-text">
                                 <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
                                 <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                            </div>
+                            </span>
                         </div>
                     </article>
                 </div>
@@ -120,9 +129,9 @@
                 <h4 class="c-title fs-20 fw-normal">Best Gift For Best Friend</h4> 
                 <h2 class="c-title fs-36 fw-bold">GIFTSET</h2>
                 <article class="giftset-container giftset-cart-flex">
-                    <img src="assets/img/Giftset_coffee.png" alt="Giftset Coffee">
+                    <img class="giftset_coffee_img align-img" src="assets/img/Giftset_coffee.png" alt="Giftset Coffee">
                     <div class="giftset-text-grid">
-                        <h5 class="c-text-brown m-20 fs-20">285.000</h5>
+                        <h5 class="c-text-brown fs-20">285.000</h5>
                         <h3 class="c-text fs-24">Giftset "Vietnamese Phin Coffee"</h3>
                         <p class="c-text">A&nbsp;perfect gift for coffee connoisseurs. The coffee beans are carefully selected by&nbsp;Revo, roasted and ground using technology and secrets learned from renowned artisans, combined with the love and passion of&nbsp;the coffee makers&hellip; creating pure cups of&nbsp;coffee intended just for you.</p>
                         <div class="giftset-container-flex">
@@ -139,10 +148,10 @@
                             
                         </div>
                        
-                        <div class="text-container">
+                        <span class="buttons-text align-center-span">
                                 <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
                                 <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                        </div>
+                        </span>
                     </div>
                     
                 </article>
@@ -163,10 +172,10 @@
                         
                         <h3 class="c-text fs-24">Combo Revo Bold</h3>
                         <p class="c-text">The caffeine content in Revo Bold is strong enough to keep you alert and focused at work...</p>
-                        <div class="text-container">
-                                    <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
-                                    <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                        </div>
+                        <span class="buttons-text align-center-span">
+                                <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
+                                <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
+                        </span>
                     </article>
                     <article class="combo-container combo-container-flex hover:a-container">
                         <img class="align-img" src="assets/img/Coffee_cup_2.png" alt="Combo Revo Everyday">
@@ -177,10 +186,10 @@
                         
                         <h3 class="c-text fs-24">Combo Revo Everyday</h3>
                         <p class="c-text">Revo Everyday is a blend of the bitterness of Robusta beans and the aromatic notes...</p>
-                        <div class="text-container">
-                                    <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
-                                    <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                        </div>
+                        <span class="buttons-text align-center-span">
+                                <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
+                                <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
+                        </span>
                     </article>
                     <article class="combo-container combo-container-flex hover:a-container">
                         <img class="align-img" src="assets/img/Coffee_cup_3.png" alt="Combo Revo Honey">
@@ -191,18 +200,20 @@
                         
                         <h3 class="c-text fs-24">Combo Revo Honey</h3>
                         <p class="c-text">“Honey” in the name Revo Honey comes from the honey processing method applied to the Arabica beans...</p>
-                        <div class="text-container">
-                                    <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
-                                    <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
-                        </div>
+                        <span class="buttons-text align-center-span">
+                                <p class="bg-brown rounded p-box fs-20 align-center"><a class="c-nav-text c-text-white" href="#paymenu">BUY NOW</a></p>
+                                <p class="fs-20 align-center"><a class="c-title c-nav-text" href="#details">DETAILS</a></p>
+                            </span>
                     </article>
                 </div>
             </div>
             
         </section> 
     </main> 
-        <footer> 
-            <p><i>&copy; Revo Coffee Việt Nam - 2018</i></p> 
-        </footer>
+    <footer> 
+        <p><i>&copy; Revo Coffee Việt Nam - 2018</i></p> 
+    </footer>
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+    <script src="scripts/menu.js"></script>
 </body> 
 </html>

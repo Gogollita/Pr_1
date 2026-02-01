@@ -19,8 +19,7 @@
 }
 
 .p-box{
-    width: 50%;
-    height: 120%;
+    width: 70%;
 }
 
 .b-20{
@@ -39,6 +38,10 @@
 
 .align-center{
     text-align: center;
+}
+
+.align-center-span{
+    align-self  : center;
 }
 
 .c-title {
@@ -93,7 +96,7 @@
 
 .a-container{
     background: #fff;
-    width: 650px;
+    width: 538px;
     height: 256px;
 }
 
@@ -200,7 +203,7 @@
     display: grid;
     gap: 1.5rem;
     justify-items: center;
-    justify-content: stretch;
+    justify-content: center;
     align-items: stretch;
     margin: 30px;
 }
@@ -219,18 +222,34 @@
 .a-card-text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
+    width: 50%;
+    padding: 5%;
 }
 
 .a-container-flex {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
     gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-items: center;
     position: relative;
     z-index: 2;
 }
+
+.buttons-text{
+    display: flex;
+    gap: 8px;
+    padding: 3%;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
 
 .gift-container-flex {
     display: flex;
@@ -238,7 +257,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    align-items: center;
     padding:35px;
 }
 
@@ -246,6 +264,7 @@
     display: flex;
     align-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .giftset-text-grid{
@@ -270,15 +289,20 @@
 .giftset-cart-flex{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 35px;
 }
 
 .align-img{
-    align-items: center;
+    align-self: center;
     width: 100%;
+}
+
+.giftset_coffee_img{
+    width: 75%;
+    height: 80%;
 }
 
 .combo-container-flex{
@@ -323,6 +347,75 @@ ul {
     list-style-type: none;
 }
 
+.menu-toggle { 
+    display: none; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: 44px; 
+    height: 44px; 
+    background: transparent; 
+    border: none; 
+    padding: 12px 10px; 
+    cursor: pointer; 
+    z-index: 1001; 
+    position: absolute;
+    top: 3.5%;
+    left: 2%;
+} 
+.menu-toggle__line { 
+    width: 100%; 
+    height: 3px; 
+    background: #405066; 
+    border-radius: 2px; 
+    transition: var(--transition); 
+} 
+/* Состояние открытого меню */
+.menu-toggle.active .menu-toggle__line:nth-child(1) { 
+    transform: rotate(45deg) translate(6px, 6px); 
+} 
+
+.menu-toggle.active .menu-toggle__line:nth-child(2) { 
+    opacity: 0; 
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(3) { 
+    transform: rotate(-45deg) translate(6px, -6px); 
+} 
+
+/* Кнопка "Наверх" */
+.scroll-top { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    width: 56px; 
+    height: 56px; 
+    background: #1e3a2334; 
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    font-size: 24px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: all 0.3s ease; 
+    z-index: 999; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+.scroll-top.visible { 
+    opacity: 1; 
+    visibility: visible; 
+} 
+.scroll-top:hover { 
+    background: #1e3a2334; 
+    transform: scale(1.1); 
+} 
+.scroll-top:active { 
+    transform: scale(0.95); 
+} 
+
 #coffee{
     margin: 100px auto;
 }
@@ -362,6 +455,22 @@ footer{
 }
 
 @media (max-width: 1199px) { 
+    .a-container{
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .a-card{
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .a-card-text{
+        width: 100%;
+        align-items: flex-start;
+    }
+
     .content-grid {
         display: flex;
         flex-direction: column;
@@ -369,7 +478,11 @@ footer{
 
     .logo-img {
         position: static;
-        margin: 20px auto;
+        margin: 40px auto auto auto;
+    }
+
+    .nav {
+        height: 500px;
     }
 
     .header-text {
@@ -382,78 +495,18 @@ footer{
         font-size: 45px;
      }
 
-    .a-container {
-        width: 90%;
-        height: auto;
-        flex-direction: column;
-    }
-    
+     .fs-20{
+        font-size: 19px;
+     }
+
     .card-img {
         width: 100%;
         height: auto;
     }
-} 
 
-@media (max-width: 767px) {
-    .container {
-        flex-wrap: wrap; 
-    }
-    
-    .container-grid {
-        width: 45%;
-    }
-
-    #signaturecoffee::before, 
-    #coffeecombo::before {
-        width: 15%;
-    }
-
-    .giftset-cart-flex {
-        flex-direction: column; 
-        align-items: center;
-    }
-}
-
-@media (max-width: 575px) {
-    .fs-70 {
-        font-size: 32px; 
-    }
-    .fs-36 { 
-        font-size: 26px; 
-    }
-    
-    .b-20 { 
-        margin-left: 0; 
-        padding: 5px 10px; 
-    }
-
-    .combo-container {
-        margin: 15px;
-        width: 100%;
-    }
-
-    
-    #signaturecoffee::before, 
+    #signaturecoffee::before,
     #coffeecombo::before {
         display: none;
     }
+} 
 
-    .header-text {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 399px) {
-    .fs-70 { 
-        font-size: 28px; 
-    }
-    
-    .text-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .p-box {
-        width: 100%;
-    }
-}
